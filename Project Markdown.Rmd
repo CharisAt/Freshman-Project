@@ -1,0 +1,214 @@
+---
+title: "Freshman Project\n \\vspace{0.1in} "
+author: "Charis Athon\n \\vspace{0.1in} "
+date: "Last compiled on `r format(Sys.time(), '%B %d, %Y')`"
+output:
+   pdf_document:
+      fig_caption: true
+      number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage 
+\tableofcontents 
+\listoffigures
+\listoftables
+\newpage
+
+```{r libraries,message=FALSE,warning=FALSE,echo=FALSE}
+library(tidyverse)
+# Reason for library ...
+#library(...)
+# Reason for library ...
+#library(...)
+
+```
+
+```{r extras,echo=FALSE}
+# Set seed is used because question ... uses a random generator
+set.seed(123)
+```
+
+
+
+Make sure every code chunk has echo=FALSE in its preamble unless you need to highlight the code for some reason in the paper.
+
+## Abstract
+Complete this after all other sections have been completed.
+
+\newpage
+
+
+
+
+# Introduction
+Describe the field that the data comes from. Should have some citation in this area.
+
+## Background
+Discuss what type of analysis has already been performed in this field. Should have some citation in this area.
+
+
+
+\newpage
+
+# The Data
+```{r data loading, echo=FALSE}
+# Load cleaned data here. If cleaning was required make sure to have a separate r file for the cleaning.
+```
+
+## Source
+Describe where this data comes from, why it was collected, who collected it, and how it was collected. A Citation may be useful here.
+
+## Variables
+Describe the variables of the data set. Some should have full descriptions if it is very important, i.e. it is the dependent variable, others can be discussed quickly. 
+
+A vertical table if better for listing variables than a horizontal table
+
+```{r variables, echo=FALSE}
+# Use this area to show the variables from your data set.
+```
+
+## Observations
+Describe what each observation of this data set represents using examples.
+
+Use a vertical table for showing a sample observation.
+
+```{r observation,echo=FALSE}
+# Use this spot to show an observation from your data set.
+```
+
+## Cleaning (if applicable)
+Describe any method of cleaning used including what was done for missing values if anything.
+
+
+\newpage
+
+# Exploratory Data Analysis
+Show the initial graphs and basic analysis methods used to determine your methodology
+
+## Interesting EDA 1 (Change name)
+Show some graph or numerical summary that imparts an interesting idea about the data set
+
+## Interesting EDA 2 (Change name)
+Show some graph or numerical summary that imparts an interesting idea about the data set
+
+
+\newpage
+
+
+# Methodology
+Describe the methods used to analyze the data. Do not discuss the analysis itself. Make sure to discuss any train/test data splitting here.
+
+## Data Tranformations (if applicable)
+Describe any transformation you did to the data to assist in the analyzing of the data such as creating dummy variables.
+
+## Types of Models
+Describe how many different models you used and why.
+
+### Model 1 (Change to appropriate name)
+Describe why you used model type one. You do not need to include a new section for every iteration of the same model type. For example you do not need 4 sections if you have 4 linear models with 1, 2, 3, and 4 independent variables.
+
+### Model 2 (Change to appropriate name)
+Describe why you used model type two.
+
+### Model 3 (Change to appropriate name)
+Describe why you used model type three.
+
+### Model 4 (Change to appropriate name)
+Describe why you used model type four.
+
+### Model 5 (Change to appropriate name)
+Describe why you used model type five.
+
+### Further Models
+If using more than 5 types of models, use this section to quickly discuss them here. These should only be models that you do not expect to be great.
+
+
+## Method of model selection
+Describe how you determine which model you choose at the end. Should also describe why you chose this method.
+
+
+
+\newpage
+
+
+# Results
+Describe the results that you received from the methods described earlier.
+
+## Model 1 (Change to appropriate name)
+Show the results for model type one. At least one fully written out model should be displayed for each model type.
+
+## Model 2 (Change to appropriate name)
+Show the results for model type two.
+
+## etc
+
+## Selected model
+Display the table that shows the model selection. If using more than 10 models only show the top 10 performing in the table, the full table should be in the appendix. The final model should be fully displayed.
+
+
+\newpage
+
+
+
+# Discussion
+
+## Final model interpolation
+Discuss what information the selected model provides that may be new and interesting
+
+## Use of Model
+Describe how this model might be used by others.
+
+## Comparison
+Compare the things learned from this selected model to the previous information.
+
+
+\newpage
+
+# Furture Work
+Discuss what work could be done with this model to make it better.
+
+
+
+
+
+\newpage
+# References
+List the reference used for your paper. This should include anything cited in your background section and the source of your data.
+
+
+\newpage
+# Appendix
+## Appendix A Graphs (Use appropriate name)
+```{r appendix A, echo=FALSE}
+# Use this code to display useful graphs that do not belong in the body of the paper.
+# For example use this area for model validation graphs like residual versus fit.
+```
+
+### A.1 (Use appropriate name)
+If showing multiple graphs make sure to index them by 0.1 each
+
+
+\newpage
+
+## Appendix B Tables (Use appropriate name)
+```{r appendix B, echo=FALSE}
+# Use this area to show results that are in table format
+```
+
+### Appendix B.1 (Use appropriate name)
+If showing multiple tables make sure to index them by 0.1 each
+
+
+## Code
+```{r cleaning,echo=FALSE,eval=FALSE}
+# Write your cleaning code here
+```
+
+Leave this code alone, it will show the rest of your code.(You can delete this line)
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+```
+
